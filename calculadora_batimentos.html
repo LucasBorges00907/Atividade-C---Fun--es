@@ -1,0 +1,38 @@
+<script>
+function main(){
+//"Calculadora de Batimentos Cardíacos" 
+//Crie um programa que receba a idade de uma pessoa e calcule a sua frequência cardíaca máxima, 
+//que é dada pela fórmula 220 menos a idade. O programa deve então calcular a faixa de batimentos 
+//cardíacos ideais para atividades físicas moderadas e intensas, que correspondem a 50-70% e 70-85%
+ //da frequência cardíaca máxima, respectivamente. Os resultados devem ser exibidos na tela. 
+//Nome do arquivo: calculadora_batimentos.js
+
+const idade = Number(prompt("Insira sua idade: "))
+const FrequenciaMaxima = calcular_frequencia_maxima(idade)
+const FaixaIdealModerada = calcular_faixa_ideal_moderada(FrequenciaMaxima)
+const FaixaIdealIntensa = calcular_faixa_ideal_intensa(FrequenciaMaxima)
+
+function calcular_faixa_ideal_intensa(FrequenciaMaxima){
+FaixaIdealIntensaminima = FrequenciaMaxima*0.7
+FaixaIdealIntensamaxima = FrequenciaMaxima*0.8
+alert ("A Faixa ideal para atividades físicas intensas é entre " + FaixaIdealIntensaminima + " e" +FaixaIdealIntensamaxima + "batimentos")
+}
+
+
+
+function calcular_faixa_ideal_moderada(FrequenciaMaxima)}{
+FaixaIdealModeradaminima = FrequenciaMaxima*0.5
+FaixaIdealModeradamaxima = FrequenciaMaxima*0.7
+alert ("A Faixa ideal para atividades físicas moderadas é entre " + FaixaIdealModeradaminima + " e" +FaixaIdealModeradamaxima + "batimentos")
+
+}
+
+
+function calcular_frequencia_maxima(idade){
+FrequenciaMaxima = 220-idade
+}
+
+
+
+main()
+</script>

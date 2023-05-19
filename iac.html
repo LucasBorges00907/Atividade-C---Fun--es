@@ -1,0 +1,24 @@
+<script>
+    //Pesquise o que é IAC e bote como comentário de várias linhas no top do arquivo.
+//Dado o quadril (em cm) e a altura (em cm) de uma pessoa, calcule o IAC dessa pessoa.
+//Fórmula do IAC: IAC = (quadril / (altura * sqrt(altura))) - 18
+//IAC estiver entre 0 e 8,9 a pessoa tá "Magra". Se o IAC estiver entre 9 e 20,9 tá "Normal". 
+//Se o IAC estiver entre 21 e 25,9, tá com "Sobrepeso", e por fim se o IAC estiver entre 26 e 29,9, 
+//está em "Obesidade grau 1". 
+//Considerando a informação acima, além de mostrar o IAC da pessoa, calcule para ela qual o quadril mínino
+// e máximo que ela deveria ter para ficar na faixa Normal.
+
+function main(){
+const quadril = Number(prompt("Insira a medida do seu quadril em cm: "))
+const altura = Number(prompt("Insira sua altura em cm: "))
+const iac = calcular_iac(quadril,altura)
+const iacnormal = verificar_iac(iac)
+
+function calcular_iac(quadril,altura){
+iac = (quadril/(altura*Math.sqrt(altura)))-18
+return iac
+}
+
+}
+main()
+</script>

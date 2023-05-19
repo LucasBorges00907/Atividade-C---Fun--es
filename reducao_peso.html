@@ -1,0 +1,37 @@
+<script>
+//Cálculo do déficit calórico médio diário para alcançar meta de perda de peso
+//Uma pessoa estabeleceu como meta perder X % do Peso Corporal em Y semanas. 
+//Sabendo que 1 kg de gordura corresponde a cerca de 7700 kcal, calcule o déficit calórico médio diário 
+//necessário para alcançar essa meta. 
+//Pergunte ao usuário qual seu Peso atual, qual sua meta % de redução de Peso e em quantas semanas. 
+//Pergunte ainda quanto ele tá disposto a consumir de kcal diariamente. 
+//Seu objetivo é informar ao usuário qual deve ser seu deficit calórico diário médio e também quanto 
+//de exercícios diários ele deve fazer para alcançar esse deficit alvo considerando sua ingestão calórica 
+//informada.
+//Faça simulações manuais para Elaborar o algoritmo. E então, após ter a solução, automatizar via software. 
+function main(){
+const pesoatual = Number(prompt("Insira seu peso atual: "))
+const percentualDeReducao = Number(prompt("Insira sua meta de redução de peso em (%)"))
+const semanas = Number(prompt("Insira em quantas semanas deseja alcançar a meta: "))
+const consumo_kcal = Number(question('Quanto desejar consumir por dia (kcal): '))
+
+const pesoparaperder = calcular_peso_a_perder(pesoatual,percentualDeReducao)
+const caloriasparaperder = pesoparaperder*7700
+const dias = semanas*7
+
+const perda_diaria = caloriasparaperder/dias
+
+alert("A perda diária necessária para alcamçar seu objetivo será de: " + perda_diaria)
+const gasto_exercicos = perda_diaria+consumo_kcal
+
+alert("Você deverá gastar " + gasto_exercicos + "kcal por dia" )
+
+function calcular_peso_a_perder(pesoatual,percentualDeReducao){
+pesoparaperder = pesoatual*percentualDeReducao
+return pesoparaperder
+}
+
+
+}
+main()
+</script>
